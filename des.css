@@ -691,8 +691,9 @@ body {
 }
 
 .featured-tier {
-    border: 2px solid var(--primary-color);
-    transform: scale(1.05);
+    /* Keep featured visual but do not change layout — make identical to others */
+    border: none;
+    transform: none;
 }
 
 .tier-card h4 {
@@ -722,6 +723,186 @@ body {
 
 .tier-features li:last-child {
     border-bottom: none;
+}
+
+/* Edited: Unified subscribe button styles
+   Connected to: `.subscribe-button` added in `index.html` (wired to purchase panel JS) */
+.subscribe-button,
+.tier-card button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, transform 0.12s ease;
+}
+
+.subscribe-button:hover,
+.tier-card button:hover {
+    background-color: #0056a8;
+    transform: translateY(-2px);
+}
+
+/* Edited: Styles for the small purchase panel
+    Connected to: JS `createPurchasePanel()` which injects `#purchase-panel` into the DOM */
+#purchase-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--secondary-color);
+    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+    color: var(--text-light);
+    z-index: 2200;
+    width: 260px;
+    display: none;
+}
+
+#purchase-panel.show {
+    display: block;
+}
+
+#purchase-panel .purchase-close {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    background: transparent;
+    border: none;
+    color: var(--text-gray);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#purchase-panel .purchase-title {
+    margin-top: 2px;
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+#purchase-panel .purchase-desc {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin: 6px 0;
+}
+
+#purchase-panel .purchase-confirm {
+    width: 100%;
+    margin-top: 8px;
+    background-color: var(--accent);
+    border: none;
+    color: #000;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    #purchase-panel { right: 12px; left: 12px; bottom: 12px; width: auto; }
+}
+
+/* Edited: Add-to-Cart modal styles
+   Connected to: `createCartModal()` in `index.html` which injects `#cart-modal` */
+#cart-modal {
+    display: none;
+}
+
+#cart-modal.show {
+    display: block;
+}
+
+#cart-modal .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 2100;
+}
+
+#cart-modal .cart-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--secondary-color);
+    color: var(--text-light);
+    z-index: 2200;
+    width: 90%;
+    max-width: 720px;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+#cart-modal .cart-close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    color: var(--text-gray);
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2300;
+}
+
+#cart-modal .cart-body {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    align-items: center;
+}
+
+#cart-modal .cart-image {
+    width: 45%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#cart-modal .cart-info {
+    width: 55%;
+}
+
+#cart-modal .cart-title {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+
+#cart-modal .cart-price {
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+#cart-modal .buy-now {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Added: short description shown in Add-to-Cart modal */
+#cart-modal .cart-desc {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 6px 0 12px 0;
+    max-height: 4.2em; /* roughly 3 lines */
+    overflow: hidden;
+}
+
+@media (max-width: 720px) {
+    #cart-modal .cart-body { flex-direction: column; }
+    #cart-modal .cart-image { width: 100%; }
+    #cart-modal .cart-info { width: 100%; }
 }
 
 /* Social Media Section */
