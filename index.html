@@ -16,9 +16,9 @@
             <ul class="nav-menu">
                 <li><a href="#games">Games</a></li>
                 <li><a href="#console">Consoles</a></li>
-                <li><a href="#store">PlayStation Store</a></li>
+                <li><a href="https://store.playstation.com/en-us/pages/latest" target="_blank" rel="noopener">PlayStation Store</a></li>
                 <li><a href="#community">Community</a></li>
-                <li><a href="#support">Support</a></li>
+                <li><a href="https://www.playstation.com/en-ph/support/?smcid=pdc%3Aen-ph%3A30th-anniversary%3Aprimary%20nav%3Amsg-support%3Asupport" target="_blank" rel="noopener">Support</a></li>
             </ul>
             <div class="nav-buttons">
                 <button class="sign-in">Sign In</button>
@@ -104,7 +104,7 @@
         </div>
         <div class="games-grid">
             <!-- Game Card 1 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A creative sandbox where you build, explore, and survive in blocky worlds.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 1 HERE (400x500px) -->
                     <img src="mine.jpg" alt="Device 2" class="showcase-img">
@@ -117,7 +117,7 @@
             </div>
 
             <!-- Game Card 2 -->
-            <div class="game-card">
+            <div class="game-card" data-description="An open-world dark fantasy RPG with challenging combat and rich lore.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 2 HERE (400x500px) -->
                      <img src="elden.jpg" alt="Device 2" class="showcase-img">
@@ -130,7 +130,7 @@
             </div>
 
             <!-- Game Card 3 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A cinematic action-adventure following Kratos and Atreus through Norse realms.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 3 HERE (400x500px) -->
                       <img src="God.jpg" alt="Device 2" class="showcase-img">
@@ -143,7 +143,7 @@
             </div>
 
             <!-- Game Card 4 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A fast-paced co-op shooter with customizable Warframes and sci-fi missions.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 4 HERE (400x500px) -->
                   <img src="War.jpg" alt="Device 2" class="showcase-img">
@@ -156,7 +156,7 @@
             </div>
 
             <!-- Game Card 5 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A tactical team-based FPS where precise gunplay and agent abilities matter.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 5 HERE (400x500px) -->
                    <img src="Jet.jpg" alt="Device 2" class="showcase-img">
@@ -169,7 +169,7 @@
             </div>
 
             <!-- Game Card 6 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A turn-based RPG with sci-fi story, characters, and strategic combat.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 6 HERE (400x500px) -->
                 <img src="star.jpg" alt="Device 2" class="showcase-img">
@@ -182,7 +182,7 @@
             </div>
 
              <!-- Game Card 7 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A competitive 3D fighting game with deep combos and character variety.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 7 HERE (400x500px) -->
                 <img src="TIKKIN.jpg" alt="Device 2" class="showcase-img">
@@ -195,7 +195,7 @@
             </div>
 
               <!-- Game Card 8 -->
-            <div class="game-card">
+            <div class="game-card" data-description="A samurai action title focused on precise swordplay and stealth.">
                 <div class="game-image">
                     <!-- PUT GAME IMAGE 8 HERE (400x500px) -->
                 <img src="Sek.jpg" alt="Device 2" class="showcase-img">
@@ -218,8 +218,9 @@
                 <h2>30 years of PlayStation</h2>
                 <p>Join us as we celebrate 30 years of PlayStation with a series of special events, and look back at the consoles, games and greatest moments that brought play to life.</p>
                 <div class="anniversary-buttons">
-                    <button class="btn-primary">Join the celebrations</button>
-                    <button class="btn-secondary">Explore our history</button>
+                    <!-- Edited: Added IDs to wire to anniversary links -->
+                    <button id="join-celebrations" class="btn-primary">Join the celebrations</button>
+                    <button id="explore-history" class="btn-secondary">Explore our history</button>
                 </div>
             </div>
             <div class="anniversary-image">
@@ -264,6 +265,8 @@
             <h2>PlayStation Plus</h2>
             <p>Get the best gaming experience with exclusive games, online multiplayer, and more</p>
             <div class="plus-tiers">
+                <!-- Edited: Tier card markup - unified subscribe button added (data-plan/data-price) -->
+                <!-- Connected to: purchase panel JS (shows small 'Buy subscription' panel) -->
                 <div class="tier-card">
                     <h4>Essential</h4>
                     <p class="tier-price">$9.99/month</p>
@@ -272,8 +275,10 @@
                         <li>Monthly Games</li>
                         <li>Exclusive Discounts</li>
                     </ul>
-                    <button class="btn-small">Subscribe</button>
+                    <button class="subscribe-button" data-plan="Essential" data-price="$9.99/month">Subscribe</button>
                 </div>
+                <!-- Edited: Tier card markup - unified subscribe button added (data-plan/data-price) -->
+                <!-- Connected to: purchase panel JS (shows small 'Buy subscription' panel) -->
                 <div class="tier-card featured-tier">
                     <h4>Extra</h4>
                     <p class="tier-price">$14.99/month</p>
@@ -282,8 +287,10 @@
                         <li>Game Catalog</li>
                         <li>+400 Games</li>
                     </ul>
-                    <button class="btn-primary">Subscribe</button>
+                    <button class="subscribe-button" data-plan="Extra" data-price="$14.99/month">Subscribe</button>
                 </div>
+                <!-- Edited: Tier card markup - unified subscribe button added (data-plan/data-price) -->
+                <!-- Connected to: purchase panel JS (shows small 'Buy subscription' panel) -->
                 <div class="tier-card">
                     <h4>Premium</h4>
                     <p class="tier-price">$19.99/month</p>
@@ -292,7 +299,7 @@
                         <li>Classic Games</li>
                         <li>Game Trials</li>
                     </ul>
-                    <button class="btn-small">Subscribe</button>
+                    <button class="subscribe-button" data-plan="Premium" data-price="$19.99/month">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -325,7 +332,7 @@
             <div class="footer-section">
                 <h5>About PlayStation</h5>
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="https://www.playstation.com/en-ph/corporate/about-us/" target="_blank" rel="noopener">About Us</a></li>
                     <li><a href="#">Press</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>
@@ -360,6 +367,7 @@
         </div>
     </footer>
 
+    <!-- Script: hero rotation + subscription panel logic -->
     <script>
         const heroImages = ['Wuwa.jpg', 'genshin.jpg', 'zzz.jpg'];
         const heroTexts = [
@@ -450,6 +458,156 @@
         }
 
         setInterval(changeHero, 5000);
+
+        // --- Subscription panel logic ---
+        // (label) IIFE below implements the floating purchase panel
+        (function(){
+            // (label) createPurchasePanel(): builds and injects the small floating purchase panel
+            function createPurchasePanel() {
+                const panel = document.createElement('div');
+                panel.id = 'purchase-panel';
+                panel.className = 'purchase-panel';
+                panel.innerHTML = `
+                    <div class="purchase-content">
+                        <button class="purchase-close" aria-label="close">✕</button>
+                        <h4 class="purchase-title">Buy subscription</h4>
+                        <p class="purchase-desc">Plan: <strong class="purchase-plan"></strong></p>
+                        <p class="purchase-desc">Price: <strong class="purchase-price"></strong></p>
+                        <div style="height:8px"></div>
+                        <button class="purchase-confirm">Confirm Purchase</button>
+                    </div>
+                `;
+                document.body.appendChild(panel);
+                return panel;
+            }
+
+            const panel = createPurchasePanel();
+
+            // (label) showPurchasePanel(): populate and display the purchase panel with plan + price
+            function showPurchasePanel(plan, price) {
+                panel.querySelector('.purchase-plan').textContent = plan;
+                panel.querySelector('.purchase-price').textContent = price;
+                panel.classList.add('show');
+            }
+
+            // (label) hidePurchasePanel(): hides the purchase panel
+            function hidePurchasePanel() {
+                panel.classList.remove('show');
+            }
+
+            // (label) document click handler: listens for
+            //  - clicks on `.subscribe-button` to open panel
+            //  - clicks on `.purchase-close` to close panel
+            //  - clicks on `.purchase-confirm` to confirm purchase (demo alert)
+            document.addEventListener('click', (e) => {
+                const sub = e.target.closest('.subscribe-button');
+                if (sub) {
+                    const plan = sub.dataset.plan || 'Subscription';
+                    const price = sub.dataset.price || '';
+                    showPurchasePanel(plan, price);
+                    return;
+                }
+
+                if (e.target.closest('.purchase-close')) {
+                    hidePurchasePanel();
+                }
+
+                if (e.target.closest('.purchase-confirm')) {
+                    const plan = panel.querySelector('.purchase-plan').textContent;
+                    hidePurchasePanel();
+                    setTimeout(() => alert('Purchase confirmed for ' + plan), 150);
+                }
+            });
+        })();
+
+        // --- Anniversary links and Add-to-Cart modal ---
+        // Edited: below handlers connect the anniversary buttons to external URLs
+        (function(){
+            const joinBtn = document.getElementById('join-celebrations');
+            const exploreBtn = document.getElementById('explore-history');
+            if (joinBtn) {
+                joinBtn.addEventListener('click', () => {
+                    // navigate to 30th anniversary page
+                    window.location.href = 'https://www.playstation.com/en-ph/30th-anniversary/';
+                });
+            }
+            if (exploreBtn) {
+                exploreBtn.addEventListener('click', () => {
+                    // navigate to PlayStation history page
+                    window.location.href = 'https://www.playstation.com/en-ph/playstation-history/1994-ps-one/';
+                });
+            }
+
+            // (label) Add-to-Cart modal: builds modal and handles Add to Cart / Buy Now
+            function createCartModal() {
+                const modal = document.createElement('div');
+                modal.id = 'cart-modal';
+                modal.className = 'cart-modal';
+                modal.innerHTML = `
+                    <div class="cart-overlay"></div>
+                    <div class="cart-box">
+                        <button class="cart-close" aria-label="close">✕</button>
+                                <div class="cart-body">
+                                    <img class="cart-image" src="" alt="game image">
+                                    <div class="cart-info">
+                                        <h3 class="cart-title"></h3>
+                                        <p class="cart-price"></p>
+                                        <!-- Added: short description about the game shown in modal -->
+                                        <p class="cart-desc"></p>
+                                        <button class="buy-now">Buy Now</button>
+                                    </div>
+                                </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                return modal;
+            }
+
+            const cartModal = createCartModal();
+
+            // showCartModal(imgSrc, title, price, description)
+            function showCartModal(imgSrc, title, price, description) {
+                cartModal.querySelector('.cart-image').src = imgSrc || '';
+                cartModal.querySelector('.cart-title').textContent = title || '';
+                cartModal.querySelector('.cart-price').textContent = price || '';
+                cartModal.querySelector('.cart-desc').textContent = description || '';
+                cartModal.classList.add('show');
+            }
+
+            function hideCartModal() {
+                cartModal.classList.remove('show');
+            }
+
+            // Delegate clicks: Add to Cart, modal close, Buy Now
+            document.addEventListener('click', (e) => {
+                // Add to Cart buttons inside game cards (label) triggers modal
+                const addBtn = e.target.closest('.btn-small');
+                if (addBtn) {
+                    const card = addBtn.closest('.game-card');
+                    if (card) {
+                        const imgEl = card.querySelector('.game-image img');
+                        const titleEl = card.querySelector('.game-info h3');
+                        const priceEl = card.querySelector('.game-info .price');
+                        const imgSrc = imgEl ? imgEl.src : '';
+                        const title = titleEl ? titleEl.textContent.trim() : '';
+                        const price = priceEl ? priceEl.textContent.trim() : '';
+                        const desc = card.dataset.description || (imgEl ? imgEl.alt : '') || 'Short description not available.';
+                        showCartModal(imgSrc, title, price, desc);
+                        return;
+                    }
+                }
+
+                if (e.target.closest('#cart-modal .cart-close') || e.target.closest('#cart-modal .cart-overlay')) {
+                    hideCartModal();
+                }
+
+                if (e.target.closest('#cart-modal .buy-now')) {
+                    const title = cartModal.querySelector('.cart-title').textContent;
+                    hideCartModal();
+                    setTimeout(() => alert('Proceeding to buy: ' + title), 150);
+                }
+            });
+        })();
     </script>
 </body>
 </html>
